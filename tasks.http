@@ -1,0 +1,11 @@
+###Listar tareas
+GET http://localhost:8080/tasks
+
+###Crear nueva tarea
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+    "title": "Tarea 1",
+    "detail": "detalle 2"
+}
