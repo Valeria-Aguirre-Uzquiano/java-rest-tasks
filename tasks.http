@@ -7,5 +7,34 @@ Content-Type: application/json
 
 {
     "title": "Tarea 1",
-    "detail": "detalle 2"
+    "detail": "detalle 1",
+    "task_status": "PENDING",
+    "status": 1
 }
+
+###Obtener una tarea
+GET http://localhost:8080/tasks/1
+
+
+### Editar una tarea
+PUT http://localhost:8080/tasks/1
+Content-Type: application/json
+
+{
+    "title": "Tarea modificada",
+    "detail": "detalle modificado"
+}
+
+
+### Editar estado de una tarea
+PUT http://localhost:8080/tasks/1?task_status=COMPLETED
+Content-Type: application/json
+
+{
+    "title": "Tarea modificada",
+    "detail": "detalle modificado"
+}
+
+
+### Eliminar una tarea
+DELETE http://localhost:8080/tasks/1
